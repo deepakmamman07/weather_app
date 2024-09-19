@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-side">
+            <div class="weather-gradient">
+                <video autoplay muted loop id="background-video">
+                    <source src="./image/media_20240815_154008_6391031063639399510.webm" type="video/mp4">
+                </video>
+            </div>
+            <div class="data-container">
+                <h2 class="date-dayname">Saturday</h2>
+                <span class="date-day">6 May 2023</span>
+                <i class="location-icon" data-feather="map-pin"></i>
+                <span class="location">Paris, FR</span>
+            </div>
+
+            <div class="weather-container">
+                <i class="weather-icon"></i>
+                <h1 class="weather-temp">29°C</h1>
+                <h3 class="weather-desc">Sunny</h3>
+            </div>
+        </div>
+
+        <div class="info-side">
+            <div class="today-info-container">
+                <div class="today-info">
+                    <div class="precipitation">
+                        <span class="title">PRESSURE</span>
+                        <span id = "pressure"class="value">0%</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="humidity">
+                        <span class="title">HUMIDITY</span>
+                        <span id = "humidity" class="value">34%</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="wind">
+                        <span class="title">WIND</span>
+                        <span id = "wind" class="value">0 km/h</span>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="week-container">
+                <ul class="week-list" id="forecast-list">
+                    <!-- Forecast items will be injected here by JavaScript -->
+                </ul>
+            </div>
+                 
+            <form class="location-container">
+                <input type="search" class="location-search" placeholder="Enter city name"/>
+                <button class="location-button">
+                    <i data-feather="map-pin" aria-hidden="true"></i>
+                    <span>Change Location</span>
+                </button>
+            </form>
+            
+    </div>
+
+
+    <script src="script.js"></script>
+     <script src="https://unpkg.com/feather-icons"></script>
+    <script type="text/javascript">
+        feather.replace()
+    </script> 
+</body>
+</html>
